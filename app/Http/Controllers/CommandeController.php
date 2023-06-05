@@ -14,7 +14,7 @@ class CommandeController extends Controller
 
   public function passercommande(Request $request, $produit_id)
   {
-
+    
     $produit = Produit::findOrFail($produit_id);
 
     // Récupérer le client actuellement authentifié
@@ -80,5 +80,5 @@ class CommandeController extends Controller
       auth()->logout();
       return redirect()->route('acceuil.boutique');
   }
-  
+
 }

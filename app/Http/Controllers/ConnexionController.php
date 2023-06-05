@@ -50,6 +50,13 @@ class ConnexionController extends Controller
 
         return redirect()->back()->withErrors("Les identifiants ne sont pas corrects");
     }
+
+    public function pagecontact(){
+        return view('clients.pagecontact');
+    }
+    public function pageapropos(){
+        return view('clients.apropospage');
+    }
 }
 
 
