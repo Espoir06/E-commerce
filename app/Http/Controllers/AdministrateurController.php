@@ -32,7 +32,8 @@ class AdministrateurController extends Controller
     public function dashboard(){
         $clients = User::count();
         $proprietaires = Proprietaire::count();
-        return view('superAdmin.dashboard', compact('clients', 'proprietaires'));
+        $categorie = Categorie::count();
+        return view('superAdmin.dashboard', compact('clients', 'proprietaires',"categorie"));
     }
 
     public function pageajoutprop(){
@@ -64,7 +65,7 @@ class AdministrateurController extends Controller
 
     public function pagemodifiercategorie(Categorie $categorie){
         return view('superAdmin.modifiercategorie', compact('categorie'));
-    }       
+    }
 
     public function modifiercategorieaction(Request $request, $categorie){
         $request->validate([
@@ -78,7 +79,7 @@ class AdministrateurController extends Controller
         ]);
 
         return redirect()->route('liste.categorie')->with("success", "La catégorie a été modifier avec succès");
-        
+
     }
 
     public function listeprop(){

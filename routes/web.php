@@ -7,7 +7,9 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProprietaireController;
+use App\Models\Categorie;
 use App\Models\Produit;
+use App\Models\Proprietaire;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,11 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $produits = Produit::take(7)->get();
-    $produitsvedettes = Produit::latest()->take(7)->get();
-    return view('clients.bienvenu', compact('produits', 'produitsvedettes'));
-})->name('acceuil.boutique');
+Route::get('/', [ProduitController::class, 'index'])->name('acceuil.boutique');
 
 Route::get('/creezcompte', [ConnexionController::class, 'pageenregistrez'])->name('register.clients');
 Route::post('/creezcompteaction', [ConnexionController::class, 'registeraction'])->name('register.clients.action');
@@ -38,7 +36,7 @@ Route::get('profilpage', [CommandeController::class, 'profilclient'])->name('pro
 Route::post('modifiermdp', [CommandeController::class, 'majpasscleint'])->name('changer.pass.client');
 Route::post('/deconnexionclient', [CommandeController::class, 'logout'])->name('deconnection.client');
 
-Route::post('/ajouter/panier',[PanierController::class, 'ajouteraupanier'])->name('ajouter.au.panier'); 
+Route::post('/ajouter/panier',[PanierController::class, 'ajouteraupanier'])->name('ajouter.au.panier');
 Route::get('prevuecommande/{produit_id}', [ProduitController::class, 'prevuecommande'])->name('prevue.commande');
 Route::post('passerunecommande/{produit_id}', [CommandeController::class, 'passercommande'])->name('passer.commande');
 Route::get('lepanierencour/', [PanierController::class, 'affichepanier'])->name('affiche.panier.client');
@@ -74,4 +72,5 @@ Route::get('/pageamodifierproduit/{produit}', [ProprietaireController::class, 'm
 Route::post('/modifierproduitaction/{produit}', [ProprietaireController::class, 'modifierproduitaction'])->name('modifier.produit.script');
 Route::delete('/supprimerproduit{produit}', [ProprietaireController::class, 'supprimerproduit'])->name('supprimer.produit');
 Route::post('/deconnexion', [ProprietaireController::class, 'logout'])->name('deconnect.proprietaire');
-
+Route::get('/contact', [ProprietaireController::class, 'logout'])->name('contact');
+Route::get('/about', [ProprietaireController::class, 'logout'])->name('about');

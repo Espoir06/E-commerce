@@ -39,10 +39,16 @@
                     </div>
                     <div class="header-links float-right">
                         <ul class="nav">
-                            <form action="{{ route('deconnection.client') }}" method="post">
-                                @csrf
-                                <li><button><i class="fas fa-sign-in-alt"></i>Deconnexion</button></li>
-                            </form>
+                            @auth
+                                <form action="{{ route('deconnection.client') }}" method="post">
+                                    @csrf
+                                    <li><button><i class="fas fa-sign-in-alt"></i>Deconnexion</button></li>
+                                </form>
+                            @else
+                                <li><a href="{{ route('login.clients') }}"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                                <li><a href="{{ route('register.clients') }}"><i class="fas fa fa-user"></i>Creez compte</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
                 </div>
@@ -52,14 +58,15 @@
                 <div class="container">
                     <div class="row header-mid align-items-center justify-content-space-between">
                         <div class="col-md-3 col-sm-4">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="assets/images/logo.png" alt="img"></a>
+                            <div class="col-md-3 col-sm-4">
+                                <a href="/"><img src="/logo.png" alt="img" width="25%"></a>
+                                TechMarketHub
                             </div>
                         </div>
-
+                        @include('partials/search')
                         <div class="col-md-3 wishlist-area">
                             <div class="header-cart-count user-account">
-                                <a href="{{ route('login.clients') }}"><i class="fa fa-user-circle"></i><span>Mon
+                                <a href="{{ route('profil.du.client') }}"><i class="fa fa-user-circle"></i><span>Mon
                                         compte</span></a>
                             </div>
                             <div class="header-wishlist header-cart-count ">
@@ -92,11 +99,15 @@
                                         class="nav-link">Accueil</a></li>
                                 <li class="nav-item"><a href="{{ route('shop.page') }}" class="nav-link">Boutique</a>
                                 </li>
-                                <li class="nav-item"><a
-                                        href="{{ route('affiche.panier.client', ['user_id' => auth()->user()->id]) }}"
-                                        class="nav-link">Mon panier</a></li>
-                                <li class="nav-item"><a href="{{ route('profil.du.client') }}"
-                                        class="nav-link">Profil</a></li>
+                                @auth
+                                    <li class="nav-item"><a
+                                            href="{{ route('affiche.panier.client', ['user_id' => auth()->user()->id]) }}"
+                                            class="nav-link">Mon panier</a></li>
+                                    <li class="nav-item"><a href="{{ route('profil.du.client') }}"
+                                            class="nav-link">Profil</a></li>
+                                @endauth
+                                <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+                                <li class="nav-item"><a     href="{{ route('about') }}" class="nav-link">A propos</a></li>
 
                             </ul>
                         </div>
@@ -173,7 +184,7 @@
                                 <p><i class="fas fa-map-marker-alt"></i>Rue yark Lomé-Togo</p>
                                 <p><a href="tell:+8801234567890"><i class="fa fa-phone-alt"></i>+228 91 34 05 87</a>
                                 </p>
-                                <p><a href="mailto:admin@gmail.com"><i class="fa fa-envelope"> </i>admin@gmail.com
+                                <p><a href="mailto:admin@gmail.com"><i class="fa fa-envelope"> </i>agamazenovia2@gmail.com
                                     </a></p>
                             </div>
                         </div>

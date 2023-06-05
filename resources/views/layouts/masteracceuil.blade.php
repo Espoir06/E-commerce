@@ -32,7 +32,7 @@
                         <ul class="nav">
                             <li><a href="tell::8801234567890"><i class="fas fa-phone-alt"></i>+228 91 34 05 87</a></li>
 
-                            <li><a href="mailto::admin@gmail.com"><i class="fas fa-envelope"></i>admin@gmail.com</a>
+                            <li><a href="mailto::admin@gmail.com"><i class="fas fa-envelope"></i>agamazenovia2@gmail.com</a>
                             </li>
 
                             <li><i class="fas fa-map-marker-alt"></i>Rue yark Lomé-Togo</li>
@@ -51,15 +51,13 @@
                 <div class="container">
                     <div class="row header-mid align-items-center justify-content-space-between">
                         <div class="col-md-3 col-sm-4">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="assets/images/logo.png" alt="img"></a>
-                                TechMarketHub
-                            </div>
+                            <a href="/"><img src="/logo.png" alt="img" width="25%"></a>
+                            TechMarketHub
                         </div>
-
+                        @include('partials/search')
                         <div class="col-md-3 wishlist-area">
                             <div class="header-cart-count user-account">
-                                <a href="account.html"><i class="fa fa-user-circle"></i><span>ACCOUNT</span></a>
+                                <a href="{{route('profil.du.client')}}"><i class="fa fa-user-circle"></i><span>ACCOUNT</span></a>
                             </div>
                             <div class="header-wishlist header-cart-count ">
                                 <a href="wishlist.html"><i class="far fa-heart"><span>3</span></i></a>
@@ -119,9 +117,10 @@
                             <ul class="nav">
                                 <li class="nav-item"><a href="{{ route('acceuil.boutique') }}" class="nav-link">Accueil</a></li>
                                 {{-- <li class="nav-item"><a href="about.html" class="nav-link">About</a></li> --}}
-                                <li class="nav-item"><a href="" class="nav-link">Boutique</a></li>
+                                <li class="nav-item"><a href="{{ route('shop.page') }}" class="nav-link">Boutique</a></li>
                                 <li class="nav-item"><a href="{{ route('login.clients') }}" class="nav-link">profil</a></li>
                                 <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">A propos</a></li>
 
                             </ul>
                         </div>
@@ -225,7 +224,7 @@
                                 <p><i class="fas fa-map-marker-alt"></i>Rue yark Lomé-Togo</p>
                                 <p><a href="tell:+8801234567890"><i class="fa fa-phone-alt"></i>+228 91 34 05 87</a>
                                 </p>
-                                <p><a href="mailto:admin@gmail.com"><i class="fa fa-envelope"> </i>admin@gmail.com
+                                <p><a href="mailto:admin@gmail.com"><i class="fa fa-envelope"> </i>agamazenovia2@gmail.com
                                     </a></p>
                             </div>
                         </div>
@@ -241,7 +240,7 @@
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="shop.html">Shop</a></li>
                                     {{-- <li><a href="cart.html">Cart</a></li> --}}
-                                    <li><a href="{{ route('admin.connect.page') }}">Administrateur</a></li>
+                                    {{-- <li><a href="{{ route('admin.connect.page') }}">Administrateur</a></li> --}}
                                 </ul>
                             </div>
                         </div>
@@ -294,9 +293,9 @@
                 <div class="container">
                     <div class="copyright-text row justify-content-between align-items-center">
                         <div class="copy-text col-md-6 col-sm-8">
-                            <p>&copy; All right reserved | espoir e-commerce <a href="#">BOUILI espoir</a></p>
+                            <p>&copy; All right reserved | espoir e-commerce <a href="{{ route('admin.connect.page') }}">BOUILI espoir</a></p>
                         </div>
-                    
+
                     </div>
 
                 </div>

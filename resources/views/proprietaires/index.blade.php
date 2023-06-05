@@ -1,7 +1,7 @@
 @extends('layouts.masterProprietaire')
 
 @section('contenu')
-    <H1>Bienvenu sur votre panel </H1>
+    <H1>Bienvenu sur votre dashboard Proprietaire</H1>
 
     <div class="col-lg-3 col-6">
         <div class="small-box bg-warning">
