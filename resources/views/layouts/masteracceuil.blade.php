@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMarketHub</title>
@@ -89,7 +90,7 @@
                                 <span id="mobile-menu"><i class="fas fa-bars"></i></span>
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a href="{{ route('acceuil.boutique') }}" class="nav-link">Accueil</a></li>
+                                <li class="nav-item active"> <a href="{{ route('acceuil.boutique') }}" class="nav-link">Accueil</a></li>
                                 {{-- <li class="nav-item"><a href="about.html" class="nav-link">About</a></li> --}}
                                 <li class="nav-item"><a href="{{ route('shop.page') }}" class="nav-link">Boutique</a></li>
                                 @auth

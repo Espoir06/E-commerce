@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <input type="submit" name="msg_submit" class="btn color_1_bg" value="Send Message">
+                                    <input type="submit" name="msg_submit" class="btn color_1_bg" value="Send Message"  >
                                 </div>
                             </div>
                         </form>

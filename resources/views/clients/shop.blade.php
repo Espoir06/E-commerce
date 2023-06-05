@@ -14,14 +14,17 @@
                 <a href="shopSingle.html" target="blank"><img src="{{ asset('produits/' . $produit->image) }}"
                         alt="product_img"></a>
                 <div class="cart_overly_btn">
+
                     <form action="" method="post">
                         {{-- @csrf
                         <input type="hidden" name="produit_id" value="{{ $produit->id }}">
                         <input type="hidden" name="libelle" value="{{ $produit->nomproduit }}">
                         <input type="number" name="quantity" value="1" > <!-- Champs pour la quantité --> --}}
-                        <a class="color_1_bg"
-                            href="{{ route('prevue.commande', ['produit_id' => $produit->id]) }}"
-                            class="btn btn-warning">Ajouter au panier</a>
+                        @auth
+                        <a class="color_1_bg" href="{{ route('prevue.commande', ['produit_id' => $produit->id]) }}" class="btn btn-warning">Ajouter au panier</a>
+                        @else
+                        <a class="color_1_bg" href="{{ route('login.clients') }}" class="btn btn-warning">Ajouter au panier</a>
+                        @endauth
                     </form>
                     {{-- <div class="overly">
                         <a href="" class="color_1_bg">Ajouter au panier</a>

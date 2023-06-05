@@ -1,5 +1,5 @@
 @php
-    $categories = \App\models\categorie::all();
+    $categories=\App\models\categorie::all();
 @endphp
 
 <div class="col-md-6 col-sm-8">
