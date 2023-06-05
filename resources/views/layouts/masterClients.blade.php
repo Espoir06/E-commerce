@@ -108,7 +108,7 @@
                                 @endauth
                                 <li class="nav-item"><a href="{{ route('page.apropos') }}" class="nav-link">A propos</a></li>
                                 <li class="nav-item"><a href="{{ route('page.contact') }}" class="nav-link">Contact</a></li>
-
+gir
                             </ul>
                         </div>
                     </div>
