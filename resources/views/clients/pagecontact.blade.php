@@ -91,9 +91,9 @@
     </section>
     <!-- Map Area -->
     <section class="map-area section-padding">
-        <div id="googleMap">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.2427807232175!2d88.94823331438458!3d25.49694842573221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fcb0232fd78783%3A0x9df3601fdd304d76!2sCoder%20IT%20Solution!5e0!3m2!1sen!2sbd!4v1640899534003!5m2!1sen!2sbd"
-                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="google-map">
+            <div id="googleMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.427928090073!2d1.0994393139929652!3d6.230827369729757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10215a7ea5069dc9%3A0xa190c63b2cb31d4a!2sUCAO-UUT!5e1!3m2!1sfr!2stg!4v1685996763788!5m2!1sfr!2stg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     @endsection

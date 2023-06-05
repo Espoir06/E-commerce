@@ -33,11 +33,7 @@
             </div>
             <div class="product_text pt-2 pb-2">
                 <h4>{{ $produit->nomproduit }}</h4>
-                <p>
-                    <a href="#">laptop, </a>
-                    <a href="#"> phone,</a>
-                    <a href="#"> watch</a>
-                </p>
+
                 <p><span class="color_1">CFA {{ $produit->prixproduit }} </span><del></del></p>
                 <div class="product_rating">
                     <i class="fas fa-star"></i>

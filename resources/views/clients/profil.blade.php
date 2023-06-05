@@ -5,8 +5,9 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-tools">
-                    <h5>{{ $clientinfo->nom }}</h5>
-                    <p> {{ $clientinfo->email }}</p>
+                    <h5>  Nom :  {{ $clientinfo->nom }}</h5>
+                    <h5>   Email :   {{ $clientinfo->email }}</h5>
+
                 </div>
             </div>
             <div class="card-body collapse in"> </div>
