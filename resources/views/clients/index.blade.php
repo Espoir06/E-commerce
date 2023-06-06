@@ -68,13 +68,13 @@
                 <h2>Produit vedette</h2>
                 <p>Nos produts phare depuis un certains moment, ne vous posez plus de questions. Commander !</p>
             </div>
-      
+
             <!-- Features Single Row -->
             <div class="featured_product row justify-content-center">
                 <!-- Single Product -->
                 @foreach ($produitsvedettes as $produit)
-                    
-                
+
+
                 <div class="col-lg-4 col-md-4 col-sm-6 single-product text-center mix watch">
                     <div class="product_img">
                         <a href="shopSingle.html" target="blank"><img src="{{ asset('produits/' . $produit->image) }}"
@@ -109,7 +109,7 @@
                 </div>
 
                 @endforeach
-    
+
             </div>
         </div>
     </section>
